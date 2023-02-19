@@ -115,7 +115,7 @@ jobs:
       with:
         name: clang-dev
         path: clang-dev.tar.bz2
-        retention-days:  ${{ github.event_name=="schedule" && 2 || 7 }}
+        retention-days:  ${{ github.event_name=='schedule' && 2 || 7 }}
     - name: Install xeus-clang-repl deps on Linux
       if: runner.os == 'Linux' #TODO: exclude on release
       run: |
