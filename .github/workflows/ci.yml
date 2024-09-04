@@ -177,6 +177,7 @@ jobs:
     - name: Install deps on Linux
       if: runner.os == 'Linux'
       run: |
+        echo "###" && sudo ls / && sudo touch /a1.txt
         # Install deps
         sudo apt-get update --yes
         sudo apt-get install --yes --no-install-recommends ncurses-dev libtinfo-dev libtinfo5 lld
